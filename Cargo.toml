@@ -1,0 +1,14 @@
+[package]
+name = "zlp-guarded-agent"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "A deterministic 64-byte tool-admission boundary for untrusted local LLM agents"
+repository = "https://github.com/Krendelb/zlp-guarded-agent"
+readme = "README.md"
+keywords = ["llm", "agents", "guardrails", "local-ai"]
+categories = ["development-tools", "data-structures"]
+publish = false
+
+[lib]
+path = "src/lib.rs"
