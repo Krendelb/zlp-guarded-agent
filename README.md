@@ -69,6 +69,25 @@ This is a bounded regression result, not a general model-quality benchmark.
 
 ## Test
 
+Run the deterministic demonstration (no model download required):
+
+```bash
+cargo run --example tool_admission
+```
+
+Expected output:
+
+```text
+allowed=SEARCH_FILES proposed=READ_FILE verdict=QUARANTINE
+allowed=SEARCH_FILES proposed=SEARCH_FILES verdict=ADMIT_READ_ONLY
+No tools executed. Both expected verdicts verified.
+```
+
+The example uses a deterministic model stand-in to demonstrate the admission
+boundary. It does not measure LLM quality or execute either proposed tool.
+
+Run the checks:
+
 ```bash
 cargo test
 cargo clippy --all-targets -- -D warnings
